@@ -15,12 +15,16 @@ header {
     margin-left: 20px 0;
 
 }
+.header-title {
+    text-align: left;
+    margin-left: 20px; /* Optional: Add some left margin for spacing */
+}
 
 #cart {
     display: flex;
     align-items: center;
     cursor: pointer;
-    margin-right: 0.8rem;
+    margin-right: 20px;
 }
 
 #cart-count {
