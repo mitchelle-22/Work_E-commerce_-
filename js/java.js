@@ -1,9 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            alert('Product added to cart!');
-        });
-    });
-});
+let cartCount = 0;
+
+function addToCart(productName) {
+    cartCount++;
+    updateCartCount();
+    alert(`${productName} added to cart!`);
+}
+
+function updateCartCount() {
+    const cartCountElement = document.getElementById('cart-count');
+    cartCountElement.textContent = cartCount;
+}
+
+
+
+
+
+
+
