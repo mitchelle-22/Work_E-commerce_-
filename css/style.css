@@ -48,11 +48,17 @@ main {
     justify-content: center;
 }
 
-.product {
+/* .product {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
     width: 300px;
+} */
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Add this line to make the card clickable */
 }
 
 .add-to-cart {
@@ -73,3 +79,18 @@ footer {
 
 
 
+.article {
+    border: 1px solid #ddd;
+    padding: 35px;
+    margin-bottom: 10px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    cursor: pointer; /* Add this line to make the article clickable */
+}
+
+.article:hover {
+    background-color: #f0f0f0; /* Add a hover effect to indicate interactivity */
+}
