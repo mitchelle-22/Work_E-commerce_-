@@ -1,18 +1,20 @@
 /* Reset default styles */
 body, h1, h2, p {
     margin: 0;
-    padding: 0;
+    padding: 10px 0;
+    
 }
 
 /* Basic styling */
 header {
     background-color: #f8f8f8;
     /* color: white; */
-    padding: 20px 0;
+    padding: 10px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 20px 0;
+    /* margin-left: 20px 0; */
+    width: 100%;
 
 }
 .header-title {
@@ -48,17 +50,11 @@ main {
     justify-content: center;
 }
 
-/* .product {
+.product {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
     width: 300px;
-} */
-.card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
-    cursor: pointer; /* Add this line to make the card clickable */
 }
 
 .add-to-cart {
@@ -68,29 +64,26 @@ main {
     padding: 8px 16px;
     cursor: pointer;
 }
-footer {
-    text-align: center;
-    background-color: #f8f8f8;
-    padding: 20px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
 
-
+/* ... (existing styles) ... */
 
 .article {
     border: 1px solid #ddd;
     padding: 35px;
     margin-bottom: 10px;
-    width: 300px;
+    height: 190px;
+    width: 250px;
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    cursor: pointer; /* Add this line to make the article clickable */
+    cursor: pointer;
 }
-
-.article:hover {
-    background-color: #f0f0f0; /* Add a hover effect to indicate interactivity */
+footer {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
