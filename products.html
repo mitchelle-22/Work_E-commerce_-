@@ -22,7 +22,10 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="category.html">Category</a></li>
             <li><a href="product.html" class="active">Product</a></li>
-            <li><a href="cart.html"><img src="images/cart.svg" class="cart" alt=""></a></li>
+            <li><a href="cart.html"><img src="images/cart.svg" class="cart" id="cart" alt=""></a> 
+                <span id="cart-count">0</span>
+
+            </li>
             
 
         </ul>
@@ -35,20 +38,39 @@
     <p>Get groceries at your fingertips</p>
    
 </section>
+<section id="modal">
+    <div class="cart-modal-overlay">
+        <div class="cart-modal">
+          <i id="close-btn" class="fas fa-times"></i>
+            <h1 class="cart-is-empty">Cart is empty</h1>
+          
+            <div class="product-rows">
+            </div>
+            <div class="total">
+              <h1 class="cart-total">TOTAL</h1>
+                <span class="total-price">$0</span>
+                  <button class="purchase-btn">PURCHASE</button>
+            </div>
+          </div>
+    </div>
+</section>
 
 
 
-<section id="product1" class="section-p1">
+<!-- <section id="product1" class="section-p1">
    
     <div class="pro-container">
-        <div class="pro">
-            <img src="images/products/mince.jpeg" alt="" height="250">
+        <div class="pro" id="item">
+            <img src="images/products/mince.jpeg" alt="Product 1" height="250">
             <div class="description">
                 <span>Fresh Beef Mince 1kg</span>
                 <h4>R48</h4>
             </div>
-            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+        
+            <a href="#" class="add-to-cart" onclick="addToCart('Product 1')"><i class="fal fa-shopping-cart cart"></i></a>
+            
         </div>
+        
         <div class="pro">
             <img src="images/products/fish.jpeg" alt="" height="250">
             <div class="description">
@@ -157,7 +179,7 @@
     </div>
    
 
-</section>
+</section> -->
 <footer class="section-p1">
 <div class="col">
     <img class="logo" src="images/logo/logo.svg" alt="">
