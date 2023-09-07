@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
         <link rel="stylesheet" href="style.css">
+        <script src="product_mock.js" defer></script>
     </head>
 
     <body>
@@ -50,12 +51,12 @@
 
  <section id="product1" class="section-p1">
    
-    <div class="pro-container">
-        <div class="pro" id="items">
-            <img src="images/products/mince.jpeg" alt="Product 1" height="250">
+    <div class="pro-container" id="items">
+        <div class="pro" id="item">
+            <img src="images/products/mince.jpeg" alt="Product 1" class="image" height="250">
             <div class="description">
-                <span>Fresh Beef Mince 1kg</span>
-                <h4>R48</h4>
+                <span class="title" >Fresh Beef Mince 1kg</span>
+                <h4 class="price">R48</h4>
             </div>
         
             <a href="#" class="add-to-cart" onclick="addToCart('Product 1')"><i class="fal fa-shopping-cart cart"></i></a>
