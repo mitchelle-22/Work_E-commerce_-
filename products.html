@@ -13,24 +13,6 @@
     </head>
 
     <body>
-<main>
-    <!-- modal -->
-    <div class="cart-modal-overlay">
-        <div class="cart-modal">
-          <i id="close-btn" class="fas fa-times"></i>
-            <h1 class="cart-is-empty">Cart is empty</h1>
-          
-            <div class="product-rows">
-            </div>
-            <div class="total">
-              <h1 class="cart-total">TOTAL</h1>
-                <span class="total-price">R0</span>
-                  <button class="purchase-btn">PURCHASE</button>
-            </div>
-          </div>
-    </div>
-    <!-- end of modal -->
-
 <section id="header">
  
     <a href="#"><img src="images/logo/logo.svg"  class="logo" alt=""></a>
@@ -42,7 +24,23 @@
             <li><a href="category.html">Category</a></li>
             <li><a href="product.html" class="active">Product</a></li>
             <li><img src="images/cart.svg" class="cart" id="cart" alt=""></a> 
-                <span id="cart-quantity">0</span>
+                <span class="cart-quantity">0</span>
+                 <!-- modal -->
+    <div class="cart-modal-overlay">
+        <div class="cart-modal">
+          <i id="close-btn" class="fas fa-times"></i>
+            <h1 class="cart-is-empty">Cart is empty</h1>
+          
+            <div class="product-rows">
+            </div>
+            <div class="total">
+              <h3 class="cart-total">TOTAL</h3>
+                <span class="total-price">R0</span>
+                  <button class="purchase-btn">PURCHASE</button>
+            </div>
+          </div>
+    </div>
+    <!-- end of modal -->
             </li>
             
 
@@ -67,41 +65,37 @@
                 <h4 class="product-price">R48</h4>
             </div>
         
-            <!-- <a href="#" class="add-to-cart"  click="add-to-cart"><i class="fal fa-shopping-cart button"></i></a> -->
-            <button class="add-to-cart"><i class="fal fa-shopping-cart cart"></i>Add to cart</button>
+            <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
+          
             
         </div>
-        <!-- <div class="pro-container">
-            <div class="card-1 card">
-              <img class="product-image" src="./img/image-1.webp" alt="">
-                <button class="add-to-cart">Add to cart</button>
-                  <span class="product-price">$1395</span>
-            </div> -->
+  
         
-        <!-- <div class="pro">
-            <img src="images/products/fish.jpeg" alt="" height="250">
+         <div class="pro">
+            <img src="images/products/fish.jpeg" alt="" class="product-image" height="250">
             <div class="description">
-                <span>Fresh  Fish</span>
-                <h4>R48</h4>
+                <span class="title">Fresh  Fish</span>
+                <h4 class="product-price">R48</h4>
             </div>
-            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
+           <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
+        </div>
+
+        <div class="pro">
+            <img src="images/products/fruits.jpeg" alt="" class="product-image" height="250">
+            <div class="description">
+                <span class="description">Fresh Fruits</span>
+                <h4 class="product-price">R48</h4>
+            </div>
+            <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
         </div>
         <div class="pro">
-            <img src="images/products/fruits.jpeg" alt="" height="250">
+            <img src="images/products/milk.jpeg" alt="" class="product-image" height="250">
             <div class="description">
-                <span>Fresh Fruits</span>
-                <h4>R48</h4>
+                <span class="description">Fresh Beef Mince 1kg</span>
+                <h4 class="product-price">R48</h4>
             </div>
-            <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
-        </div>
-        <div class="pro">
-            <img src="images/products/milk.jpeg" alt="" height="250">
-            <div class="description">
-                <span>Fresh Beef Mince 1kg</span>
-                <h4>R48</h4>
-            </div>
-            <a href="#" onclick="addToCart()"><i class="fal fa-shopping-cart cart"></i></a>
-        </div> -->
+            <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
+        </div> 
     </div>
 </section>
 
@@ -147,7 +141,6 @@
     <div class="copyright">
         <p>@ 2023, Michelle - Grocery Mart Store</p>
     </div>
-</main>
 </footer>
 
         <script src="product.js"></script>
