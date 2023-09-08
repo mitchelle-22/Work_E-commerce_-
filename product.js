@@ -1,112 +1,146 @@
-let listCard = document.querySelector(".listCard");
-let total = document.querySelector(".total");
-let cartCountElement = document.querySelector("cart-count"); //quantity
-let closeShopping = document.querySelector(".closeShopping");
-let items = document.getElementById("items")
-let body = document.querySelector("body");
+const cart = document.getElementById('cart');
+const cartModalOverlay = document.querySelector('.cart-modal-overlay');
+// const cartButton = document.getElementById('button')
+// opening of cartModalOverlay
 
-let cartCount = [];
-
-cart.addEventListener("click", () => {
-  body.classList.add("active");
-});
-closeShopping.addEventListener("click", () => {
-  body.classList.remove("active");
-});
-
-const productMock = [
-  {
-      image: 'product 1.jpeg',
-      title: 'Product 1',
-      price: 19.99,
-  },
-  // {
-  //     image: 'product2.jpg',
-  //     title: 'Product 2',
-  //     price: 24.99,
-  // },
-  // Add more products as needed
-];
-
-function cardDisplay() {
-   items.innerHTML ="";
-
- productMock.forEach((item, index) => {
-    items.innerHTML += `
-  <div class="items">
-  <img src=${item.image} alt="product 1">
-  <div class="description">
-    <span class="title"${item.title}</span>
-      <h4 class="price"R${item.price}</h4>
-      </div>
-       
-       <a href="#" onclick="addToCart(${index})><i class="fal fa-shopping-cart cart">
-            
-      </div
-  
-  `
-  });
-}
-window.onload = function() {
-  cardDisplay();
-};
-
-
-function addToCart(item) {
-  cartCount++;
-  updateCartCount();
-}
-
-function updateCartCount() {
-  const cartCountElement = document.getElementById("cart-count");
-  cartCountElement.textContent = cartCount;
-}
-
-function listCards() {
-  listCard.innerHTML = "";
-  cartCount.forEach((item,index) => {
-    listCard.innerHTML += `<div>${item.title}`;
-    listCard.innerHTML += `<div>${item.cartCount}`;
-  });
-  reloadCard();
-}
-
-function reloadCard() {
-  listCard.innerHTML = "";
-  let count = 0;
-  let totalPrice = 0;
-  listCards.forEach((value, key) => {
-    totalPrice = totalPrice + value.price;
-    count = count + value.quantity;
-    if (value != null) {
-      let newDiv = document.createElement("li");
-      newDiv.innerHTML = `
-              <div><img src="image/${value.image}"/></div>
-              <div>${value.name}</div>
-              <div>${value.price.toLocaleString()}</div>
-              <div>
-                  <button onclick="changeQuantity(${key}, ${
-        value.quantity - 1
-      })">-</button>
-                  <div class="count">${value.quantity}</div>
-                  <button onclick="changeQuantity(${key}, ${
-        value.quantity + 1
-      })">+</button>
-              </div>`;
-      listCard.appendChild(newDiv);
-    }
-  });
-  total.innerText = totalPrice.toLocaleString();
-  quantity.innerText = count;
-}
-function changeQuantity(key, quantity) {
-  if (quantity == 0) {
-    delete listCards[key];
+cart.addEventListener('click', () => {
+  if (cartModalOverlay.style.transform === 'translateX(-200%)'){
+    cartModalOverlay.style.transform = 'translateX(0)';
   } else {
-    listCards[key].quantity = quantity;
-    listCards[key].price = quantity * products[key].price;
+    cartModalOverlay.style.transform = 'translateX(-200%)';
   }
-  reloadCard();
+})
+
+// close cart modal
+const closeBtn = document.querySelector ('#close-btn');
+
+closeBtn.addEventListener('click', () => {
+  cartModalOverlay.style.transform = 'translateX(-200%)';
+});
+cartModalOverlay.addEventListener('click', (e) => {
+  if (e.target.classList.contains('cart-modal-overlay')){
+    cartModalOverlay.style.transform = 'translateX(-200%)'
+  }
+})
+
+// end of closing button for the modal
+
+
+//adding product to cart
+const addToCart = document.getElementsByClassName('add-to-cart');
+const productRow = document.getElementsByClassName('product-row');
+
+for (var i = 0; i < addToCart.length; i++) {
+  button = addToCart[i];
+  button.addEventListener('click', addToCartClicked)
 }
 
+// function removeItem (event) {
+//   btnClicked = event.target
+//   btnClicked.parentElement.parentElement.remove()
+//   updateCartPrice()
+// }
 
+
+
+function addToCartClicked (event) {
+  button = event.target;
+  var cartItem = button.parentElement;
+  var price = cartItem.getElementsByClassName('product-price')[0].innerText;
+  
+  var imageSrc = cartItem.getElementsByClassName('product-image')[0].src;
+  addItemToCart (price, imageSrc);
+  updateCartPrice()
+}
+
+function addItemToCart (price, imageSrc) {
+  var productRow = document.createElement('div');
+  productRow.classList.add('product-row');
+  var productRows = document.getElementsByClassName('product-rows')[0];
+  var cartImage = document.getElementsByClassName('cart-image');
+  
+  for (var i = 0; i < cartImage.length; i++){
+    if (cartImage[i].src == imageSrc){
+      alert ('This item has already been added to the cart')
+      return;
+    }
+  }
+  
+  var cartRowItems = `
+  <div class="product-row">
+        <img class="cart-image" src="${imageSrc}" alt="">
+        <span class ="cart-price">${price}</span>
+        <input class="product-quantity" type="number" value="1">
+        <button class="remove-btn">Remove</button>
+        </div>
+        
+      `
+  productRow.innerHTML = cartRowItems;
+  productRows.append(productRow);
+  productRow.getElementsByClassName('remove-btn')[0].addEventListener('click', removeItem)
+  productRow.getElementsByClassName('product-quantity')[0].addEventListener('change', changeQuantity)
+  updateCartPrice()
+}
+// end of add products to cart
+
+// Remove products from cart
+const removeBtn = document.getElementsByClassName('remove-btn');
+for (var i = 0; i < removeBtn.length; i++) {
+  button = removeBtn[i]
+  button.addEventListener('click', removeItem)
+}
+
+function removeItem (event) {
+  btnClicked = event.target
+  btnClicked.parentElement.parentElement.remove()
+  updateCartPrice()
+}
+
+// update quantity input
+var quantityInput = document.getElementsByClassName('product-quantity')[0];
+
+for (var i = 0; i < quantityInput; i++){
+  input = quantityInput[i]
+  input.addEventListener('change', changeQuantity)
+}
+function changeQuantity(event) {
+  var input = event.target
+  if (isNaN(input.value) || input.value <= 0){
+    input.value = 1
+  }
+  updateCartPrice()
+}
+// update total price
+function updateCartPrice() {
+  var total = 0
+  for (var i = 0; i < productRow.length; i += 2) {
+    cartRow = productRow[i]
+  var priceElement = cartRow.getElementsByClassName('cart-price')[0]
+  var quantityElement = cartRow.getElementsByClassName('product-quantity')[0]
+  var price = parseFloat(priceElement.innerText.replace('R', ''))
+  var quantity = quantityElement.value
+  total = total + (price * quantity )
+    
+  }
+  document.getElementsByClassName('total-price')[0].innerText =  'R' + total
+
+document.getElementsByClassName('cart-quantity')[0].textContent = i /= 2
+}
+
+// purchase items
+const purchaseBtn = document.querySelector('.purchase-btn');
+
+const closeCartModal = document.querySelector('.cart-modal');
+
+purchaseBtn.addEventListener('click', purchaseBtnClicked)
+
+function purchaseBtnClicked () {
+  alert ('Thank you for your purchase');
+  cartModalOverlay.style.transform= 'translateX(-100%)'
+ var cartItems = document.getElementsByClassName('product-rows')[0]
+ while (cartItems.hasChildNodes()) {
+   cartItems.removeChild(cartItems.firstChild)
+   
+ }
+  updateCartPrice()
+}

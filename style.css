@@ -363,72 +363,136 @@ footer .copyright{
 
 
 /*=========================modal======================*/
-.card{
+.cart-modal-overlay {
     position: fixed;
-    top:0;
-    left: 100%;
-    width: 500px;
-    background: #fff;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    height: 100vh;
-    transition: 0.5s;
-}
-.active .card{
-    left: calc(100% - 500px);
-}
-.active .container{
-   transform: translateX(-200px);
-}
-.card h1{
-    color: #465b52;
-    font-weight: 100;
-    margin: 0;
-    padding: 0 20px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-.card .checkOut{
-    position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-}
-.card .checkOut div{
-   background-image: url(images/button.png);
-   color: #465b52;
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
-}
-.card .checkOut div:nth-child(2){
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 2;
+    transform: translateX(-200%);
+    transition: .5s ease-out;
     
-    color: #465b52;
-}
-.listCard li{
-    display: grid;
-    grid-template-columns: 100px repeat(3, 1fr);
-    color: #fff;
-    row-gap: 10px;
-}
-.listCard li div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.listCard li img{
-    width: 90%;
-}
-.listCard li button{
-    background-color: #fff5;
+  }
+  
+  .cart-modal {
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(50,50,50);
+    float: right;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+  
+  #close-btn {
+    font-size: 1.5rem;
+    float: right;
+    margin: .5em 2em 0 0;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .cart-is-empty {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    display: none;
+    
+  }
+  
+  .total {
+    text-align: center;
+    margin: 2em 0 2em 0;
+  /*   display: none; */
+  }
+  
+  .cart-total {
+    color: white;
+  }
+  
+  .total-price {
+    color: white;
+    font-size: 2rem;
+    display: block;
+  }
+  
+  .purchase-btn {
+    font-size: 1rem;
+    font-weight: bolder;
+    background-color: green;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 10px;
+    outline: none;
     border: none;
-}
-.listCard .count{
-    margin: 0 10px;
-}
+    cursor: pointer;
+    margin: 2em 0 1em 0;
+  }
+  
+  .product-rows {
+    margin-top: 3em;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  
+  .product-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-image {
+    width: 10rem;
+    margin: 1em;
+  }
+  
+  .cart-price {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  
+  .product-quantity {
+    width: 4rem;
+    font-size: 2rem;
+    margin-left: 3rem;
+  }
+  
+  .remove-btn {
+    padding: 1em 2em;
+    background-color: red;
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 3rem;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+  
+  .remove-btn:active {
+    transform: translateY(5px);
+  }
+  
+  @media (max-width: 1000px){
+    .cart-modal {
+      width: 100vw;
+    } 
+    
+    .product-row {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    
+    .remove-btn {
+      margin: 0
+    }
+    
+    .product-quantity {
+      margin: .5em 0 .5em 0
+    }
+  }
