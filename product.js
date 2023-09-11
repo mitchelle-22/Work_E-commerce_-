@@ -1,6 +1,6 @@
+
 const cart = document.getElementById('cart');
 const cartModalOverlay = document.querySelector('.cart-modal-overlay');
-// const cartButton = document.getElementById('button')
 // opening of cartModalOverlay
 
 cart.addEventListener('click', () => {
@@ -34,14 +34,6 @@ for (var i = 0; i < addToCart.length; i++) {
   button = addToCart[i];
   button.addEventListener('click', addToCartClicked)
 }
-
-// function removeItem (event) {
-//   btnClicked = event.target
-//   btnClicked.parentElement.parentElement.remove()
-//   updateCartPrice()
-// }
-
-
 
 function addToCartClicked (event) {
   button = event.target;

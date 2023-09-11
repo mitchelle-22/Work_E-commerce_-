@@ -27,11 +27,21 @@ h2 {
 h4 {
   font-size: 20px;
   color: #222;
+
 }
 
 h6 {
   font-weight: 700;
   font-size: 12px;
+}
+h3{
+  font-size: 20x;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 30px;
+ 
+  color: #222;
 }
 
 p {
@@ -133,9 +143,12 @@ color: #088178;
 #feature{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
+    
 }
+
 #feature .fe-box{
     width: 180px;
     text-align: center;
