@@ -168,6 +168,7 @@ color: #088178;
     margin-bottom: 10px;
 }
 #feature .fe-box h6{
+  
 display: inline-block;
 padding: 9px 8px 6px 8px;
 line-height: 1;
@@ -176,9 +177,11 @@ color: #088178;
 background-color: #fddde4;
 }
 #feature .fe-box:nth-child(2) h6{
+
     background-color: #cdebbc;
 
 }
+
 #feature .fe-box:nth-child(3) h6{
     background-color: #d1e8f2;
 
