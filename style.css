@@ -205,8 +205,11 @@ background-color: #fddde4;
 
 #product1 .pro-container{
     display: flex;
+    position: relative;
     justify-content: space-between;
     padding-top: 20px;
+  
+
    
 }
 #product1 .pro{
@@ -219,8 +222,10 @@ background-color: #fddde4;
     box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
     margin: 15px 0;
     transition: 0.2s ease;
-    position: relative;
+     position: relative; 
+    
 }
+
 #product1 .pro:hover{
     box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
 
