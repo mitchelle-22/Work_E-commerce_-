@@ -1,34 +1,37 @@
 [
     {
       "id": 1,
-      "name": "Apples",
+      "name": "Strawberries",
       "category": "Fruits",
-      "price": 1.99,
+      "price": 27.99,
       "description": "Fresh red apples",
       "image": "images/products/fruits/strawberry.jpg"
     },
     {
       "id": 2,
-      "name": "Milk",
+      "name": "Chicken",
       "category": "Dairy",
-      "price": 2.49,
+      "price": 45.49,
       "description": "1-liter carton of milk",
       "image": "images/products/meat/chicken.jpg"
     },
     {
-      "id": 2,
-      "name": "Milk",
+      "id": 3,
+      "name": "Eggs",
       "category": "Dairy",
-      "price": 2.49,
+      "price": 48.49,
       "description": "1-liter carton of milk",
-      "image": "images/products/meat/chicken.jpg"
+      "image": "images/products/dairy/eggs.jpg"
     },
     {
-      "id": 2,
-      "name": "Milk",
+      "id": 4,
+      "name": "Carrots",
       "category": "Dairy",
-      "price": 2.49,
+      "price": 22.49,
       "description": "1-liter carton of milk",
-      "image": "images/products/meat/chicken.jpg"
+      "image": "images/products/vegitables/carrots.jpg"
     }
+    
   ]
+
+
