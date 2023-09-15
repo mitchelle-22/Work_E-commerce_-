@@ -9,28 +9,28 @@
             "name": "Cheese",
             "price": 1.99,
             "description": "Fresh red apples",
-            "image": "images/products/dairy/cheddar.jpg"
+            "image": "../images/products/dairy/cheddar.jpg"
           },
           {
             "id": 102,
             "name": "Milk",
             "price": 0.99,
             "description": "Ripe yellow bananas",
-            "image": "images/products/dairy/milk.jpg"
+            "image": "../images/products/dairy/milk.jpg"
           },
           {
             "id": 103,
             "name": "Carrots",
             "price": 0.99,
             "description": "Ripe yellow bananas",
-            "image": "images/products/vegitables/carrots.jpg"
+            "image": "../images/products/vegitables/carrots.jpg"
           },
           {
             "id": 104,
             "name": "Pork",
             "price": 0.99,
             "description": "Ripe yellow bananas",
-            "image": "images/products/meat/pork.jpg"
+            "image": "../images/products/meat/pork.jpg"
           }
         ]
       }

@@ -5,7 +5,7 @@
       "category": "Fruits",
       "price": 27.99,
       "description": "Fresh red apples",
-      "image": "images/products/fruits/strawberry.jpg"
+      "image": "../images/products/fruits/strawberry.jpg"
     },
     {
       "id": 2,
@@ -13,7 +13,7 @@
       "category": "Dairy",
       "price": 45.49,
       "description": "1-liter carton of milk",
-      "image": "images/products/meat/chicken.jpg"
+      "image": "../images/products/meat/chicken.jpg"
     },
     {
       "id": 3,
@@ -21,7 +21,7 @@
       "category": "Dairy",
       "price": 48.49,
       "description": "1-liter carton of milk",
-      "image": "images/products/dairy/eggs.jpg"
+      "image": "../images/products/dairy/eggs.jpg"
     },
     {
       "id": 4,
@@ -29,8 +29,9 @@
       "category": "Dairy",
       "price": 22.49,
       "description": "1-liter carton of milk",
-      "image": "images/products/vegitables/carrots.jpg"
+      "image": "../images/products/vegitables/carrots.jpg"
     }
+    
     
   ]
 

@@ -8,22 +8,24 @@
         <title>Mich's Ecommerce Grocery Store</title>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../style.css">
+       
     </head>
 
     <body>
 <section id="header">
  
-    <a href="#"><img src="images/logo/logo.svg"  class="logo" alt=""></a>
+    <a href="#"><img src="../images/logo/logo.svg"  class="logo" alt=""></a>
     <div>
         <ul id="navbar">
             <li> <input type="text" id="search-input" placeholder="Search...">
                 <button id="search-button">Search</button></li>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../pages/index.html">Home</a></li>
             <li><a href="category.html">Category</a></li>
-            <li><a href="product.html" class="active">Product</a></li>
-            <li><img src="images/cart.svg" class="cart" id="cart" alt=""></a> 
+            <li><a href="../pages/products.html" class="active">Product</a></li>
+            <li><img src="../images/cart.svg" class="cart" id="cart" alt=""></a> 
                 <span class="cart-quantity">0</span>
+                
                  <!-- modal -->
     <div class="cart-modal-overlay">
         <div class="cart-modal">
@@ -31,10 +33,11 @@
             <h1 class="cart-is-empty">Cart is empty</h1>
           
             <div class="product-rows">
+
             </div>
             <div class="total">
               <h3 class="cart-total">TOTAL</h3>
-                <span class="total-price">R0</span>
+                <span class="total-price" id="total">R0</span>
                   <button class="purchase-btn">PURCHASE</button>
             </div>
           </div>
@@ -55,52 +58,16 @@
 
  <section id="product1" class="section-p1">
    
-    <div class="pro-container" id="products-list">
-        <div class="pro">    
-            <img src="images/products/mince.jpeg" alt="" class="product-image" height="250">
-            <div class="description">
-                <span class="title" >Fresh Beef Mince 1kg</span>
-                <h4 class="product-price">R48</h4>
-            </div>
+    <div class="pro-container" id="product-list">
         
-            <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
-          
             
         </div>
-        
-  
-<!--         
-         <div class="pro">
-            <img src="images/products/fish.jpeg" alt="" class="product-image" height="250">
-            <div class="description">
-                <span class="title">Fresh  Fish</span>
-                <h4 class="product-price">R48</h4>
-            </div>
-           <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
-        </div>
-
-        <div class="pro">
-            <img src="images/products/fruits.jpeg" alt="" class="product-image" height="250">
-            <div class="description">
-                <span class="description">Fresh Fruits</span>
-                <h4 class="product-price">R48</h4>
-            </div>
-            <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
-        </div>
-        <div class="pro">
-            <img src="images/products/milk.jpeg" alt="" class="product-image" height="250">
-            <div class="description">
-                <span class="description">Fresh Beef Mince 1kg</span>
-                <h4 class="product-price">R48</h4>
-            </div>
-            <a href="#" class="add-to-cart fal fa-shopping-cart cart" ></a>
-        </div> -->
     </div> 
 </section>
 
 <footer class="section-p1">
 <div class="col">
-    <img class="logo" src="images/logo/logo.svg" alt="">
+    <img class="logo" src="../images/logo/logo.svg" alt="">
     <h4>Contact</h4>
     <p><strong>Address:</strong>7 Quince The Media Mill,The Digital Academy</p>
     <p><strong>Phone:</strong>011 066 1987</p>
@@ -134,7 +101,7 @@
 </div>
 <div class="col payment">
     <p>Secured Payment</p>
-    <img src="images/pay/pay.png" alt="">
+    <img src="../images/pay/pay.png" alt="">
 </div>
 
     <div class="copyright">
@@ -142,7 +109,7 @@
     </div>
 </footer>
 
-        <script src="product.js"></script>
+<script src="../js/product.js"></script>
     </body>
 
 </html>
