@@ -26,7 +26,7 @@ cartModalOverlay.addEventListener('click', (e) => {
 
   const productList = document.getElementById('product-list');
   const addToCart = document.getElementsByClassName('add-to-cart');
-  const productRow = document.getElementsByClassName('product-row');
+  const productRows = document.querySelector('.product-rows'); 
   
 
   // Fetch products from JSON file
@@ -68,47 +68,49 @@ const productElement = document.createElement('div');
   }
 
   // Function to handle adding a product to the cart
-function addToCartClicked(event) {
-  const button = event.target;
-  const productImage = button.getAttribute('data-image');
-  const productPrice = parseFloat(button.getAttribute('data-price'));
+  function addToCartClicked(event) {
+    const button = event.target;
+    const productImage = button.getAttribute('data-image');
+    const productPrice = parseFloat(button.getAttribute('data-price'));
 
-  const productRow = document.createElement('div');
-  productRow.classList.add('product-row');
+    // Check if the product is already in the cart
+    const existingProduct = productRows.querySelector(`[data-image="${productImage}"]`);
+    if (existingProduct) {
+      alert('This item is already in the cart.');
+      return;
+    }
 
-  const productRows = document.querySelector('.product-rows');
+    // Create the cart item
+    const productRow = document.createElement('div');
+    productRow.classList.add('product-row');
 
-  // Check if the product is already in the cart
-  const existingProduct = productRows.querySelector(`[data-image="${productImage}"]`);
-  if (existingProduct) {
-    alert('This item is already in the cart.');
-    return;
+    productRow.innerHTML = `
+      <div class="product-row">
+        <img src="${productImage}" alt="" class="product-image" height="100">
+        <span class="product-price">R${productPrice.toFixed(2)}</span>
+        <input class="product-quantity" type="number" value="1">
+        <button class="remove-btn">Remove</button>
+      </div>
+    `;
+
+    productRows.appendChild(productRow);
+
+    // Attach event listeners for quantity change and remove
+    productRow.querySelector('.remove-btn').addEventListener('click', removeItem);
+    productRow.querySelector('.product-quantity').addEventListener('change', changeQuantity);
+
+    updateCartPrice();
+
+    // Update the cart counter
+    const cartQuantity = document.querySelector('.cart-quantity');
+    const currentQuantity = parseInt(cartQuantity.textContent);
+    cartQuantity.textContent = currentQuantity + 1;
   }
-
-  // Create the cart item
-  productRow.innerHTML = `
-    <div class="product-row">
-    <img src="${productImage}" alt="" class="product-image" height="100">
-      <span class="product-price">R${productPrice.toFixed(2)}</span>
-      <input class="product-quantity" type="number" value="1">
-      <button class="remove-btn">Remove</button>
-    </div>
-  `;
-
-  productRows.appendChild(productRow);
-
-  // Attach event listeners for quantity change and remove
-  productRow.querySelector('.remove-btn').addEventListener('click', removeItem);
-  productRow.querySelector('.product-quantity').addEventListener('change', changeQuantity);
-
-  updateCartPrice();
-
-  // Update the cart counter
-  const cartQuantity = document.querySelector('.cart-quantity');
-  const currentQuantity = parseInt(cartQuantity.textContent);
-  cartQuantity.textContent = currentQuantity + 1;
-}
-
+  const removeBtn = document.getElementsByClassName('remove-btn');
+  for (var i = 0; i < removeBtn.length; i++) {
+    button = removeBtn[i]
+    button.addEventListener('click', removeItem)
+  }
 // Function to remove an item from the cart
 function removeItem(event) {
   const button = event.target;
@@ -148,7 +150,6 @@ function updateCartPrice() {
 
   document.querySelector('.total-price').innerText = `R${total.toFixed(2)}`;
 }
-  
   
   // end of add products to cart
 

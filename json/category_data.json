@@ -1,0 +1,147 @@
+{
+    "categories": [
+      {
+        "id": 1,
+        "name": "Fruits",
+        "products": [
+          {
+            "id": 101,
+            "name": "Apple",
+            "price": 1.99,
+            "description": "Fresh red apples",
+            "image": "products/fruits.jpeg"
+          },
+          {
+            "id": 102,
+            "name": "Banana",
+            "price": 0.99,
+            "description": "Ripe yellow bananas",
+            "image": "products/fruits.jpeg"
+          },
+          {
+            "id": 103,
+            "name": "PineApple",
+            "price": 0.99,
+            "description": "Ripe yellow bananas",
+            "image": "products/fruits.jpeg"
+          },
+          {
+            "id": 104,
+            "name": "Pear",
+            "price": 0.99,
+            "description": "Ripe yellow bananas",
+            "image": "products/fruits.jpeg"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Vegetables",
+        "products": [
+          {
+            "id": 201,
+            "name": "Carrot",
+            "price": 0.75,
+            "description": "Crunchy orange carrots",
+            "image": "carrot.jpg"
+          },
+          {
+            "id": 202,
+            "name": "Broccoli",
+            "price": 1.25,
+            "description": "Fresh green broccoli",
+            "image": "broccoli.jpg"
+          },
+          {
+            "id": 203,
+            "name": "Carrot",
+            "price": 0.75,
+            "description": "Crunchy orange carrots",
+            "image": "carrot.jpg"
+          },
+          {
+            "id": 204,
+            "name": "Carrot",
+            "price": 0.75,
+            "description": "Crunchy orange carrots",
+            "image": "carrot.jpg"
+          }
+          
+        ]
+    },
+        {
+            "id": 3,
+            "name": "Dairy Products",
+            "products": [
+              {
+                "id": 301,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              },
+              {
+                "id": 302,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              },
+              {
+                "id": 303,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              },
+              {
+                "id": 404,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              }
+
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Fresh meat",
+            "products": [
+              {
+                "id": 401,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              },
+              {
+                "id": 402,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              },
+              {
+                "id": 403,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              },
+              {
+                "id": 404,
+                "name": "Carrot",
+                "price": 0.75,
+                "description": "Crunchy orange carrots",
+                "image": "carrot.jpg"
+              }
+            ]
+        } 
+    ]
+}
+      
+    
+    
+  
+  

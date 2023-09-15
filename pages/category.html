@@ -18,31 +18,14 @@
     <a href="#"><img src="../images/logo/logo.svg"  class="logo" alt=""></a>
     <div>
         <ul id="navbar">
-            <li> <input type="text" id="search-input" placeholder="Search...">
+            <li> <input type="text" id="search-input" placeholder="Search by product name">
                 <button id="search-button">Search</button></li>
             <li><a href="../pages/index.html">Home</a></li>
-            <li><a href="category.html">Category</a></li>
-            <li><a href="../pages/products.html" class="active">Product</a></li>
+            <li><a href="../pages/category.html">Category</a></li>
+            <li><a href="products.html" class="active">Product</a></li>
             <li><img src="../images/cart.svg" class="cart" id="cart" alt=""></a> 
                 <span class="cart-quantity">0</span>
                 
-                 <!-- modal -->
-    <div class="cart-modal-overlay">
-        <div class="cart-modal">
-          <i id="close-btn" class="fas fa-times"></i>
-            <h1 class="cart-is-empty">Cart is empty</h1>
-          
-            <div class="product-rows">
-
-            </div>
-            <div class="total">
-              <h3 class="cart-total">TOTAL</h3>
-                <span class="total-price" id="total">R0</span>
-                  <button class="purchase-btn">PURCHASE</button>
-            </div>
-          </div>
-    </div>
-    <!-- end of modal -->
             </li>
             
 
@@ -58,8 +41,10 @@
 
  <section id="product1" class="section-p1">
    
-    <div class="pro-container" id="product-list">
-        
+    <div class="pro-container" id="products-list">
+        <!-- <div id="pro">
+            
+          </div> -->
         
             
         </div>
@@ -110,7 +95,7 @@
     </div>
 </footer>
 
-<script src="../js/product.js"></script>
+<script src="../js/category.js"></script>
     </body>
 
 </html>
